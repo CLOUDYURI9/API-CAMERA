@@ -4,6 +4,7 @@ const captureButton = document.getElementById('botaoCaptura');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const capturedImage = document.getElementById('imagemCapturada');
+const downloadButton = document.getElementById('downloadButton');  // Botão de download
 
 // Função para verificar a compatibilidade com a API de câmera
 function checkCameraSupport() {
@@ -38,6 +39,17 @@ function captureImage() {
   const imageDataURL = canvas.toDataURL('image/png');
   capturedImage.src = imageDataURL;
   capturedImage.style.display = 'block';
+
+  // Habilitando o botão de download
+  downloadButton.style.display = 'inline-block';
+  
+  // Criando um link de download para a imagem capturada
+  downloadButton.onclick = function() {
+    const link = document.createElement('a');
+    link.href = imageDataURL;
+    link.download = 'imagem-capturada.png';
+    link.click();
+  };
 }
 
 // Verificando a compatibilidade do navegador e iniciando a câmera

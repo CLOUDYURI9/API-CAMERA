@@ -13,15 +13,21 @@
 
   <div class="port">
     <div class="live">
+      <div>
+        <video id="video" autoplay></video>
+      </div>
+      
 
-      <video id="video" autoplay></video>
-
-      <button id="botaoCaptura">Capturar Imagem</button>
+      <div>
+        <button id="botaoCaptura">Capturar Imagem</button>
+      </div>
+      
     </div>
 
     <div class="exibicao">
       <canvas id="canvas"></canvas>
       <img class="imgCapturada" id="imagemCapturada" alt="Imagem Capturada" style="display:none; margin-top: 20px;">
+      <button id="downloadButton" style="display:none;">Baixar Imagem</button>
     </div>
   </div>
 
