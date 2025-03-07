@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captura de Imagem da Câmera</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Captura de Imagem com a Câmera</h1>
+
+  <div class="port">
+    <div class="live">
+
+      <video id="video" autoplay></video>
+
+      <button id="botaoCaptura">Capturar Imagem</button>
+    </div>
+
+    <div class="exibicao">
+      <canvas id="canvas"></canvas>
+      <img class="imgCapturada" id="imagemCapturada" alt="Imagem Capturada" style="display:none; margin-top: 20px;">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
